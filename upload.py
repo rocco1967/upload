@@ -21,7 +21,7 @@ if uploaded_file is not None:
     #st.write(stringio)
 
     # To read file as string:
-    tring_data = stringio.read()
+    string_data = stringio.read()
     #st.write(string_data)
 
     # Can be used wherever a "file-like" object is accepted:
