@@ -26,8 +26,9 @@ if uploaded_file is not None:
     #st.write(string_data)
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
-    st.line_chart(dataframe['charges'])
-    
+    #st.line_chart(dataframe['charges'])
+a=st.text_input("")    
+st.line_chart(dataframe['a'])    
 #file1=st.file_uploader('upload photo')
 #st.image(file1,width=700)
 #option = st.selectbox(
