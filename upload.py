@@ -34,3 +34,4 @@ option = st.selectbox(
     'upload photos ?',
     ('yes','no'))
 file1=st.file_uploader('upload photo')
+st.image(file1,width=700)
