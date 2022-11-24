@@ -29,12 +29,12 @@ if uploaded_file is not None:
     st.write(dataframe,use_container_width=True)
     st.line_chart(dataframe['charges']
 with open("flower.png", "rb") as file:
-     btn = st.download_button(
-     label="Download image",
-     data=file,
-     file_name="flower.png",
-     mime="image/png"
-     )
+   btn = st.download_button(
+   label="Download image",
+   data=file,
+   file_name="flower.png",
+   mime="image/png"
+   )
             
      
            
