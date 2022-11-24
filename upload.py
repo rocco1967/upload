@@ -11,7 +11,7 @@ from PIL import Image
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
 
-uploaded_file = st.file_uploader("Choose a file",accept_multiple_files=True)
+uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
@@ -34,4 +34,4 @@ option = st.selectbox(
     'upload photos ?',
     ('yes','no'))
 file1=st.file_uploader('upload photo')
-st.image(file1,width=700)
+#st.image(file1,width=700)
