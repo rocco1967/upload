@@ -27,4 +27,4 @@ if uploaded_file is not None:
     # Can be used wherever a "file-like" object is accepted:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe,use_container_width=True)
-    st.line_chart(dataframe.charges.values)
+    st.line_chart(dataframe['charges'])
