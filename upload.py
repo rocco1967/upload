@@ -28,5 +28,6 @@ if uploaded_file is not None:
     st.write(dataframe)
     st.line_chart(dataframe['charges'])
 file1=st.file_uploader('upload file')
+show_file.image(file1)
      
            
