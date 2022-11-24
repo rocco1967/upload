@@ -28,11 +28,11 @@ if uploaded_file is not None:
     st.write(dataframe)
     st.line_chart(dataframe['charges'])
 def main():
-    file1=st.file_uploader('upload file'):
-    show_file1=st.empty()
-    if not file1:
-      show_file1.info('please upload a file)
-      return
+     file1=st.file_uploader('upload file'):
+     show_file1=st.empty()
+     if not file1:
+     show_file1.info('please upload a file)
+     return
     content=file1.getvalue()
     if instance(file1,BytesIO):
        show_file1.image(file1)
