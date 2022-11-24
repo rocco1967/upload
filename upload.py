@@ -28,7 +28,7 @@ if uploaded_file is not None:
     st.write(dataframe)
     st.line_chart(dataframe['charges'])
 def main():
-     file1=st.file_uploader('upload file'):
+    file1=st.file_uploader('upload file'):
      show_file1=st.empty()
      if not file1:
      show_file1.info('please upload a file)
