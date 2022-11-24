@@ -7,6 +7,7 @@ Created on Thu Nov 24 10:38:04 2022
 import streamlit as st
 from io import StringIO
 import pandas as pd
+from PIL import Image
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
 
@@ -27,28 +28,7 @@ if uploaded_file is not None:
     st.write(dataframe)
     st.line_chart(dataframe['charges'])
     
-    from PIL import Image
 
-def load_image(image_file):
-	img = Image.open(image_file)
-	return img
 
-...
-
-if choice == "Image":
-		st.subheader("Image")
-		image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
-
-		if image_file is not None:
-
-			  # To See details
-			  file_details = {"filename":image_file.name, "filetype":image_file.type,
-                              "filesize":image_file.size}
-			  st.write(file_details)
-
-              # To View Uploaded Image
-			  st.image(load_image(image_file),width=250)
-
-    
      
            
