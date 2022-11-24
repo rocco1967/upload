@@ -27,6 +27,6 @@ if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
     st.line_chart(dataframe['charges'])
-file1=st.file_uploader('upload file'):
+file=st.file_uploader('upload file'):
      
            
