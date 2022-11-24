@@ -29,6 +29,6 @@ if uploaded_file is not None:
     st.line_chart(dataframe['charges'])
 file1=st.file_uploader('upload file')
 #file1=Image.open('file1')
-st.image(file1,width=900)
+st.image(file1,width=700)
      
            
