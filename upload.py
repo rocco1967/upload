@@ -29,10 +29,7 @@ if uploaded_file is not None:
     st.line_chart(dataframe['charges'])
     
 file1=st.file_uploader('upload photo')
-if file1 is not None:
-    #file1=Image.open('file1')
-   st.image(file1,width=700)
-else:
-   st.wtite('upload photo')
-     
-           
+#st.image(file1,width=700)
+option = st.selectbox(
+    'upload photos ?',
+    ('yes','no'))
