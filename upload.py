@@ -31,8 +31,8 @@ if uploaded_file is not None:
 file1=st.file_uploader('upload photo')
 if file1 is not None:
     #file1=Image.open('file1')
-    st.image(file1,width=700):
+   st.image(file1,width=700):
 else:
-    st.wtite('upload photo')
+   st.wtite('upload photo')
      
            
