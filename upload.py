@@ -11,6 +11,10 @@ from PIL import Image
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
 option=  st.selectbox('large or normal view?',('LARGE', 'NORMAL'))
+if selectbox == 'LARGE':
+    set_page_config(layout="wide")
+else:
+    set_page_config(layout='centered')
 #st.write('You selected:', option)
 selectbox = st.selectbox(
     "How would you like to see ?",
