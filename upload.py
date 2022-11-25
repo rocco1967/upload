@@ -14,7 +14,7 @@ selectbox =  st.selectbox("large or normal view?",("LARGE", "NORMAL"))
 if selectbox == "LARGE":
     et_page_config(layout="wide")
 else:
-    set_page_config(layout="centered")
+    set_page_config(layout="")
 #st.write('You selected:', option)
 selectbox = st.selectbox(
     "How would you like to see ?",
