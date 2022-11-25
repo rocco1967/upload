@@ -10,9 +10,9 @@ import pandas as pd
 from PIL import Image
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
-selectbox =  st.selectbox('large or normal view?',("LARGE", "NORMAL"))
-#if selectbox == 'LARGE':
-#    set_page_config(layout="wide")
+selectbox =  st.selectbox("large or normal view?",("LARGE", "NORMAL"))
+if selectbox == "LARGE":
+#    et_page_config(layout="wide")
 #else:
     #set_page_config(layout="centered")
 #st.write('You selected:', option)
