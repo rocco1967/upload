@@ -12,9 +12,9 @@ from PIL import Image
                                   #accept_multiple_files=False)
 selectbox =  st.selectbox("large or normal view?",("LARGE", "NORMAL"))
 if selectbox == "LARGE":
-#    et_page_config(layout="wide")
-#else:
-    #set_page_config(layout="centered")
+    et_page_config(layout="wide")
+else:
+    set_page_config(layout="centered")
 #st.write('You selected:', option)
 selectbox = st.selectbox(
     "How would you like to see ?",
