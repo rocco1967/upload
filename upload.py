@@ -10,7 +10,7 @@ import pandas as pd
 from PIL import Image
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
-screen size= st.slider('large or normal view?',LARGE, NORMAL)
+screen size= st.slider('large or normal view?','LARGE', 'NORMAL')
 selectbox = st.selectbox(
     "How would you like to see ?",
     ("file_csv", "photo"))
