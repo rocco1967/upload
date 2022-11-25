@@ -11,7 +11,7 @@ from PIL import Image
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
 option=  st.selectbox('large or normal view?',('LARGE', 'NORMAL'))
-st.write('You selected:', option)
+#st.write('You selected:', option)
 selectbox = st.selectbox(
     "How would you like to see ?",
     ("file_csv", "photo"))
