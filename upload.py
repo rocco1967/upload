@@ -10,7 +10,7 @@ import pandas as pd
 from PIL import Image
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
-screen size= st.selectbox('large or normal view?',('LARGE', 'NORMAL'))
+screen size=  st.selectbox('large or normal view?',('LARGE', 'NORMAL'))
 st.write('You selected:', screen_size)
 selectbox = st.selectbox(
     "How would you like to see ?",
