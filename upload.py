@@ -12,7 +12,8 @@ import pandas as pd
 from PIL import Image
 from pytube import YouTube
 import pytube
-import regeximport tempfile
+import regex
+import tempfile
 
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
