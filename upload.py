@@ -59,8 +59,8 @@ youtube_streams=st.text_input('Insert YouTube Link')
 #youtube_streams=youtube_streams.astype(str)
 if youtube_streams is not None:      
     
-    st.write('make your choice')
+    #st.write('make your choice')
 
-yt=YouTube('youtube_streams')
-audio = yt.streams.get_audio_only()
-st.download_button('download the selected video/audio',audio.download())
+   yt=YouTube('youtube_streams')
+   audio = yt.streams.get_audio_only()
+   st.download_button('download the selected video/audio',audio.download())
