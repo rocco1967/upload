@@ -68,7 +68,7 @@ audio=yt.streams.get_audio_only()
     
 st.write(audio)
     #binary_contents=b'audio'
-st.download_button('scegli:'audio)     
+st.download_button('Download binary file'audio)     
         
 #else:
     #st.write('make your choice')
