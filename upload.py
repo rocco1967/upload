@@ -8,6 +8,8 @@ import streamlit as st
 from io import StringIO
 import pandas as pd
 from PIL import Image
+from pytube import YouTube
+import pytube
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
 select =  st.selectbox("large or normal view?",("LARGE", "NORMAL"))
@@ -34,7 +36,7 @@ if selectbox == 'file_csv':
     #st.write(stringio)
 
     # To read file as string:
-        tring_data = stringio.read()
+        string_data = StringIo.read()
     #st.write(string_data)
 
     # Can be used wherever a "file-like" object is accepted:
