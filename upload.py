@@ -65,6 +65,7 @@ if youtube_streams is not None:
     #st.write(youtube_streams)
     yt=YouTube(youtube_streams)
     audio=yt.streams.get_audio_only()
+    audio=open(audio,'rb')
     audio=audio.read()
     st.audio(audio, format='audio/mp3')
     st.write(audio)
