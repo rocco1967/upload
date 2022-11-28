@@ -63,7 +63,7 @@ if youtube_streams is not None:
     yt=YouTube(youtube_streams)
     audio=yt.streams.get_audio_only()
     st.write(audio)
-with open("audio", "rb") as file:
+with open("audio.mp4", "rb") as file:
      btn = st.download_button(
      label="Download image",
      data=file,
