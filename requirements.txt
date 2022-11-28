@@ -4,3 +4,4 @@ streamlit
 numpy
 requests
 matplotlib
+pytube
