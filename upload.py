@@ -68,9 +68,8 @@ audio=yt.streams.get_audio_only()
     
 st.write(audio)
     #binary_contents=b'audio'
-st.download_button(abel="Download image",
-            data=audio)
-        
+st.download_button(label="Download image",data=audio)
+            
 #else:
     #st.write('make your choice')
 #youtube_streams=str(input('Insert YouTube Link:'))
