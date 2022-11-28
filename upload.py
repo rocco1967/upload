@@ -68,7 +68,7 @@ if youtube_streams is not None:
     
     st.write(audio)
     #binary_contents=b'audio'
-    st.download_button('Download binary file', audio)     
+    st.download_button(audio)     
         
 #else:
     #st.write('make your choice')
