@@ -10,6 +10,7 @@ import pandas as pd
 from PIL import Image
 from pytube import YouTube
 import pytube
+import regex
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
 select =  st.selectbox("large or normal view?",("LARGE", "NORMAL"))
