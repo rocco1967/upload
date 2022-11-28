@@ -57,11 +57,18 @@ if selectbox =='photo':
 #st.image(uploaded_filcached_image=fil.getvalue()
 ############################################################################
 #youtube_stream="ttps://www.youtube.com/watch?v=b7o3F-MVE-Y"
-youtube_streams=st.text_input('Insert YouTube Link')
+youtube_streams=st.text_input('Insert YouTube Link')#
+if youtube_streams is not None:
+    st.write(youtube_streams)
+    yt=YouTube(youtube_streams)
+    audio=yt.streams.get_audio_only()
+        
+else:
+    st.write('make your choice')
 #youtube_streams=str(input('Insert YouTube Link:'))
-st.write(youtube_streams)
-yt=YouTube(youtube_streams)
-audio=yt.streams.get_audio_only()
-st.write(audio)
-#st.download_button(audio.download())
-audio.download()
+#st.write(youtube_streams)##
+#yt=YouTube(youtube_streams)##
+#audio=yt.streams.get_audio_only()##
+#st.write(audio)##
+#st.download_button(audio.download())##
+#audio.download()##
