@@ -62,6 +62,7 @@ if youtube_streams is not None:
     st.write(youtube_streams)
     yt=YouTube(youtube_streams)
     audio=yt.streams.get_audio_only()
+    st.write(audio)
         
 else:
     st.write('make your choice')
