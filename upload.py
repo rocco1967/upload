@@ -59,7 +59,7 @@ if selectbox =='photo':
 #youtube_stream="ttps://www.youtube.com/watch?v=b7o3F-MVE-Y"
 youtube_streams=st.text_input('Insert YouTube Link')#
 if youtube_streams is not None:
-    st.write(youtube_streams)
+    #st.write(youtube_streams)
     yt=YouTube(youtube_streams)
     audio=yt.streams.get_audio_only()
     st.write(audio)
