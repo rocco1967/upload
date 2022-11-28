@@ -6,7 +6,7 @@ Created on Thu Nov 24 10:38:04 2022
 """
 
 import streamlit as st
-print('The streamlit version is {}.'.format(streamlit.__version__))
+st.write(streamlit.__version__)
 from io import StringIO
 import pandas as pd
 from PIL import Image
