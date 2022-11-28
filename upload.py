@@ -66,7 +66,7 @@ if youtube_streams is not None:
     yt=YouTube(youtube_streams)
     
     audio=yt.streams.get_audio_only()
-    bytes_audio=audio.getvalues()
+    bytes_audio=audio.getvalue()
     bytes_audio=open(bytes_audio,'rb')
     bytes_audio=bytes_audio.read()
     st.audio(bytes_audio, format='audio/mp3')
