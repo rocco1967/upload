@@ -58,3 +58,5 @@ if selectbox =='photo':
 youtube_streams=st.text_input('Insert YouTube Link')
 #youtube_streams=str(input('Insert YouTube Link:'))
 a=st.write(youtube_streams)
+yt=Youtube(a)
+audio=yt.streams.streams.get_audio_only()
