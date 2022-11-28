@@ -64,10 +64,12 @@ youtube_streams=st.text_input('Insert YouTube Link')#
 if youtube_streams is not None:
     #st.write(youtube_streams)
     yt=YouTube(youtube_streams)
+    
     audio=yt.streams.get_audio_only()
-    audio=open(audio,'rb')
-    audio=audio.read()
-    st.audio(audio, format='audio/mp3')
+    bytes_audio=audio.getvalues()
+    bytes_audio=open(bytes_audio,'rb')
+    bytes_audio=bytes_audio.read()
+    st.audio(bytes_audio, format='audio/mp3')
     st.write(audio)
     #binary_contents=b'audio'
 #st.download_button(label="Download image",data=audio)
