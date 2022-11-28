@@ -62,6 +62,6 @@ if youtube_streams is not None:
     #st.write('make your choice')
 
     yt=YouTube(youtube_streams)
-#audio = yt.streams.get_audio_only()
+    audio = yt.streams.get_audio_only()
 #audio.download()
 #st.download_button('download the selected video/audio',audio.download())
