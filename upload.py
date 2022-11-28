@@ -61,8 +61,6 @@ youtube_streams=st.text_input('Insert YouTube Link')
 #youtube_streams=str(input('Insert YouTube Link:'))
 st.write(youtube_streams)
 yt=YouTube(youtube_streams)
-audio=yt.streams.get_audio_only()
+audio=StringIO(yt.streams.get_audio_only())
 #st.download_button(audio.download())
-with open(os.path.join("fileDir",audio),"wb") as f:
-      f.write((audio).getbuffer())
-      st.success("File Saved")
+
