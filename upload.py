@@ -12,7 +12,8 @@ import pandas as pd
 from PIL import Image
 from pytube import YouTube
 import pytube
-import regex
+import regeximport tempfile
+
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
 select =  st.selectbox("large or normal view?",("LARGE", "NORMAL"))
@@ -65,7 +66,7 @@ if youtube_streams is not None:
     
     st.write(audio)
 binary_contents=b'audio'
-st.download_button('Download binary file', binary_contents)     
+#st.download_button('Download binary file', binary_contents)     
         
 #else:
     #st.write('make your choice')
