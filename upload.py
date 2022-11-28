@@ -32,7 +32,7 @@ if selectbox == 'file_csv':
     #st.write(bytes_data)
 
     # To convert to a string based IO:
-        stringio = stringio(uploaded_file.getvalue().decode("utf-8"))
+        stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
     #st.write(stringio)
 
     # To read file as string:
