@@ -6,7 +6,7 @@ Created on Thu Nov 24 10:38:04 2022
 """
 
 import streamlit as st
-st.write(streamlit.__version__)
+
 from io import StringIO
 import pandas as pd
 from PIL import Image
@@ -62,4 +62,4 @@ youtube_streams=st.text_input('Insert YouTube Link')
 st.write(youtube_streams)
 yt=YouTube(youtube_streams)
 audio=yt.streams.get_audio_only()
-st.download_button(audio.download())
+#st.download_button(audio.download())
