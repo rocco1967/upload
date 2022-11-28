@@ -63,9 +63,16 @@ if youtube_streams is not None:
     yt=YouTube(youtube_streams)
     audio=yt.streams.get_audio_only()
     st.write(audio)
+with open("audio", "rb") as file:
+     btn = st.download_button(
+     label="Download image",
+     data=file,
+     file_name="flower.png",
+     mime="audio"
+     )    
         
-else:
-    st.write('make your choice')
+#else:
+    #st.write('make your choice')
 #youtube_streams=str(input('Insert YouTube Link:'))
 #st.write(youtube_streams)##
 #yt=YouTube(youtube_streams)##
