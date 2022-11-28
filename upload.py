@@ -36,7 +36,7 @@ if selectbox == 'file_csv':
     #st.write(stringio)
 
     # To read file as string:
-        string_data = StringIo.read()
+        string_data = stringio.read()
     #st.write(string_data)
 
     # Can be used wherever a "file-like" object is accepted:
