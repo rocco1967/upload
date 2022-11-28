@@ -66,7 +66,7 @@ if youtube_streams is not None:
     yt=YouTube(youtube_streams)
     audio=yt.streams.get_audio_only()
     audio=audio.read()
-    st.audio(audio, format=‘audio/mp3’)
+    st.audio(audio, format='audio/mp3')
     st.write(audio)
     #binary_contents=b'audio'
 #st.download_button(label="Download image",data=audio)
