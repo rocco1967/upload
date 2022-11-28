@@ -54,14 +54,14 @@ if selectbox =='photo':
         st.write('make your choice')
 #st.image(uploaded_filcached_image=fil.getvalue()
 ############################################################################
-youtube_streams=(r"ttps://www.youtube.com/watch?v=b7o3F-MVE-Y")
+youtube_stream="ttps://www.youtube.com/watch?v=b7o3F-MVE-Y"
 #youtube_streams=st.text_input('Insert YouTube Link')
 #youtube_streams=youtube_streams.astype(str)
 #if youtube_streams is not None:      
     
     #st.write('make your choice')
 
-yt=YouTube('youtube_streams')
+yt=YouTube('youtube_stream')
 audio = yt.streams.get_audio_only()
 audio.download()
 #st.download_button('download the selected video/audio',audio.download())
