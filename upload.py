@@ -55,4 +55,5 @@ if selectbox =='photo':
 #st.image(uploaded_filcached_image=fil.getvalue()
 ############################################################################
 #youtube_stream="ttps://www.youtube.com/watch?v=b7o3F-MVE-Y"
-youtube_streams=st.text_input('Insert YouTube Link')
+#youtube_streams=st.text_input('Insert YouTube Link')
+youtube_streams=str(input('Insert YouTube Link'))
