@@ -68,8 +68,8 @@ if youtube_streams is not None:
     yt=YouTube(youtube_streams)
     
     audio=yt.streams.get_audio_only()
-    st.download_button(label='audio',data=audio,mime='audio/mp4')
-    #st.file_uploader(audio)
+    #st.download_button(label='audio',data=audio,mime='audio/mp4')
+    st.file_uploader(audio)
     #bytes_audio=audio.getvalue()
     #bytes_audio=open(audio,'rb')
     #bytes_audio=bytes_audio.read()
