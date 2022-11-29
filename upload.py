@@ -70,8 +70,8 @@ if youtube_streams is not None:
     yt=YouTube(youtube_streams)#.streams.first()
     try:
     #time.sleep(2)
-    #audio= yt.streams.filter(progressive= True)
-        audio=yt.streams.get_audio_only()
+        audio= yt.streams.filter(progressive= True)
+        #audio=yt.streams.get_audio_only()
     except pytube.exceptions.VideoUnavailable:
         st.write('Video is unavaialable, skipping.') 
     else:    
