@@ -74,7 +74,7 @@ if youtube_streams is not None:
     
     audio=yt.streams.get_audio_only()
     audio.download()
-    audio=BytesIO(audio)
+    #audio=BytesIO(audio)
     audio_file=open(audio,'rb')
     audio_bytes = audio_file.read()
     st.audio(audio_bytes, format='audio/ogg')
