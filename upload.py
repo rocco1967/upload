@@ -7,7 +7,7 @@ Created on Thu Nov 24 10:38:04 2022
 
 import streamlit as st
 
-from io import StringIO
+from io import StringIO,BytesIO
 import pandas as pd
 from PIL import Image
 from pytube import YouTube
