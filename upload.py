@@ -12,6 +12,7 @@ import pandas as pd
 from PIL import Image
 from pytube import YouTube
 import pytube
+from typing import Pattern, Union
 import regex
 import tempfile
 st.write(pytube.__version__)
