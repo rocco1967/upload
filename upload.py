@@ -62,7 +62,7 @@ if selectbox =='photo':
 #fp = tempfile.TemporaryFile()
 youtube_streams=st.text_input('Insert YouTube Link')#
 if youtube_streams is not None:
-    stringio = StringIO(youtube_streams.read())
+    
     #st.write(youtube_streams)
     #youtube_streams=st.text_input('Insert YouTube Link')
     yt=YouTube(youtube_streams)
