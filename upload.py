@@ -66,10 +66,15 @@ if selectbox =='photo':
 
 youtube_streams=st.text_input('Insert YouTube Link')#
 if youtube_streams is not None:
-    yt=YouTube(youtube_streams).streams.first()
+    
+    yt=YouTube(youtube_streams)#.streams.first()
+    try:
     #time.sleep(2)
     #audio= yt.streams.filter(progressive= True)
-    audio=yt.streams.get_audio_only()
+        audio=yt.streams.get_audio_only()
+    except pytube.exceptions.VideoUnavailable:
+        print('Video is unavaialable, skipping.') 
+    else:    
     audio=audio.download()
     #audio=BytesIO(audio)
     audio_file=open(audio,'rb')
