@@ -66,19 +66,24 @@ if selectbox =='photo':
 
 youtube_streams=st.text_input('Insert YouTube Link')#
 #st.write(youtube_streams)
+#p = Playlist(playlist_url)
+
 if youtube_streams is not None:
-    
+   try: 
     #st.write(youtube_streams)
     #youtube_streams=st.text_input('Insert YouTube Link')
-    yt=YouTube(youtube_streams)
-    time.sleep(2)
-    audio=yt.streams.get_audio_only()
-    audio=audio.download()
+       yt=YouTube(youtube_streams)
+   except VideoUnavailable:
+       pass
+    else:
+    #time.sleep(2)
+       audio=yt.streams.get_audio_only()
+       audio=audio.download()
     #audio=BytesIO(audio)
-    audio_file=open(audio,'rb')
-    audio_bytes = audio_file.read()
-    st.download_button('download_file',data=audio_bytes)
-    st.audio(audio_bytes, format='audio/ogg')
+       audio_file=open(audio,'rb')
+       audio_bytes = audio_file.read()
+       st.download_button('download_file',data=audio_bytes)
+       st.audio(audio_bytes, format='audio/ogg')
     #audio=BytesIO()
     #audio=audio.getvalue()
     #st.download_button(label='audio',data=audio,)
@@ -87,7 +92,7 @@ if youtube_streams is not None:
     #bytes_audio=open(audio,'rb')
     #bytes_audio=bytes_audio.read()
     #st.audio(bytes_audio, format='mpeg3')
-    st.write(audio)
+       st.write(audio)
     #binary_contents=b'audio'
 #st.download_button(label="Download image",data=audio)
             
