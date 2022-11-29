@@ -73,7 +73,7 @@ if youtube_streams is not None:
     
     audio=yt.streams.get_audio_only()
     audio=BytesIO()
-    audio=audio.get.getvalue()
+    audio=audio.getvalue()
     st.download_button(label='audio',data=audio)
     #st.file_uploader(audio)
     #bytes_audio=audio.getvalue()
