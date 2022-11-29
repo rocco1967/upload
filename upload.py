@@ -69,7 +69,7 @@ if youtube_streams is not None:
     yt=YouTube(youtube_streams)
     #time.sleep(2)
     audio= yt.streams.filter(progressive= True)
-    audio=yt.streams.get_audio_only()
+    #audio=yt.streams.get_audio_only()
     audio=audio.download()
     #audio=BytesIO(audio)
     audio_file=open(audio,'rb')
