@@ -16,6 +16,7 @@ from typing import Pattern, Union
 import regex
 import tempfile
 import re
+var_regex = re.compile(r"^\$*\w+\W")
 #st.write(pytube.__version__)
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
