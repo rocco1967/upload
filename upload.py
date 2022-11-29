@@ -60,17 +60,17 @@ if selectbox =='photo':
 ############################################################################
 #youtube_stream="ttps://www.youtube.com/watch?v=b7o3F-MVE-Y"
 #fp = tempfile.TemporaryFile()
-#youtube_streams=st.text_input('Insert YouTube Link')#
+youtube_streams=st.text_input('Insert YouTube Link')#
 if youtube_streams is not None:
     #st.write(youtube_streams)
-    youtube_streams=st.text_input('Insert YouTube Link')
+    #youtube_streams=st.text_input('Insert YouTube Link')
     yt=YouTube(youtube_streams)
     
     audio=yt.streams.get_audio_only()
     #bytes_audio=audio.getvalue()
-    bytes_audio=open(audio,'rb')
-    bytes_audio=bytes_audio.read()
-    st.audio(bytes_audio, format='audio/mp3')
+    #bytes_audio=open(audio,'rb')
+    #bytes_audio=bytes_audio.read()
+    #st.audio(bytes_audio, format='audio/mp3')
     st.write(audio)
     #binary_contents=b'audio'
 #st.download_button(label="Download image",data=audio)
