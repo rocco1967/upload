@@ -68,7 +68,7 @@ youtube_streams='https://www.youtube.com/watch?v=qod03PVTLqk'
 if youtube_streams is not None:
     yt=YouTube(youtube_streams)
     #time.sleep(2)
-    audio= yt.streams.filter(file_extension='mp4')
+    audio= yt.streams.filter(only_audio= True)
     audio=yt.streams.get_audio_only()
     audio=audio.download()
     #audio=BytesIO(audio)
