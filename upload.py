@@ -78,7 +78,7 @@ if youtube_streams is not None:
     audio_file=open(audio,'rb')
     audio_bytes = audio_file.read()
     st.download_button('download_file',data=audio_bytes)
-    st.audio(audio_bytes, format='audio/mp3')
+    st.audio(audio_bytes, format='audio/MP41')
     #audio=BytesIO()
     #audio=audio.getvalue()
     #st.download_button(label='audio',data=audio,)
