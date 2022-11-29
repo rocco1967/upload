@@ -15,7 +15,8 @@ import pytube
 from typing import Pattern, Union
 import regex
 import tempfile
-st.write(pytube.__version__)
+import re
+#st.write(pytube.__version__)
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
 select =  st.selectbox("large or normal view?",("LARGE", "NORMAL"))
@@ -71,7 +72,7 @@ if youtube_streams is not None:
     yt=YouTube(youtube_streams)
     
     audio=yt.streams.get_audio_only()
-    #st.download_button(label='audio',data=audio,mime='audio/mp4')
+    st.download_button(label='audio',data=audio,mime='audio/mp4')
     #st.file_uploader(audio)
     #bytes_audio=audio.getvalue()
     #bytes_audio=open(audio,'rb')
