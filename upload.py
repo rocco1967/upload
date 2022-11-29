@@ -71,7 +71,7 @@ if youtube_streams is not None:
     #st.write(youtube_streams)
     #youtube_streams=st.text_input('Insert YouTube Link')
     yt=YouTube(youtube_streams)
-    
+    time.sleep(2)
     audio=yt.streams.get_audio_only()
     audio=audio.download()
     #audio=BytesIO(audio)
