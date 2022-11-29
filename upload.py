@@ -63,7 +63,7 @@ if selectbox =='photo':
 #fp = tempfile.TemporaryFile()
 
 youtube_streams=st.text_input('Insert YouTube Link')#
-st.write(youtube_streams)
+#st.write(youtube_streams)
 if youtube_streams is not None:
     
     #st.write(youtube_streams)
@@ -77,7 +77,7 @@ if youtube_streams is not None:
     #bytes_audio=open(audio,'rb')
     #bytes_audio=bytes_audio.read()
     #st.audio(bytes_audio, format='audio/mp3')
-    #st.write(audio)
+    st.write(audio)
     #binary_contents=b'audio'
 #st.download_button(label="Download image",data=audio)
             
