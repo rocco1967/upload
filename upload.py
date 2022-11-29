@@ -61,7 +61,7 @@ if selectbox =='photo':
         st.write('make your choice')
 #st.image(uploaded_filcached_image=fil.getvalue()
 ############################################################################
-youtube_streams="https://www.youtube.com/watch?v=qod03PVTLqk"
+youtube_streams="https://www.youtube.com/watch?v=b7o3F-MVE-Y"
 #fp = tempfile.TemporaryFile()
 
 #youtube_streams=st.text_input('Insert YouTube Link')#
