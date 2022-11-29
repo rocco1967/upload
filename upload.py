@@ -61,6 +61,19 @@ if selectbox =='photo':
 ############################################################################
 #youtube_stream="ttps://www.youtube.com/watch?v=b7o3F-MVE-Y"
 #fp = tempfile.TemporaryFile()
+class RegexMatchError(ExtractError):
+    """Regex pattern did not return any matches."""
+
+    def __init__(self, caller: str, pattern: Union[str, Pattern]):
+        """
+        :param str caller:
+            Calling function
+        :param str pattern:
+            Pattern that failed to match
+        """
+        super().__init__(f"{caller}: could not find match for {pattern}")
+        self.caller = caller
+        self.pattern = pattern
 youtube_streams=st.text_input('Insert YouTube Link')#
 if youtube_streams is not None:
     
