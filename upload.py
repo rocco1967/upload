@@ -73,13 +73,13 @@ if youtube_streams is not None:
     #audio= yt.streams.filter(progressive= True)
         audio=yt.streams.get_audio_only()
     except pytube.exceptions.VideoUnavailable:
-        print('Video is unavaialable, skipping.') 
+        st.write('Video is unavaialable, skipping.') 
     else:    
-    audio=audio.download()
+        audio=audio.download()
     #audio=BytesIO(audio)
-    audio_file=open(audio,'rb')
-    audio_bytes = audio_file.read()
-    st.download_button('download_file',data=audio_bytes)
-    st.audio(audio_bytes, format='audio/ogg')
-    st.write(audio)
+        audio_file=open(audio,'rb')
+        audio_bytes = audio_file.read()
+        st.download_button('download_file',data=audio_bytes)
+        st.audio(audio_bytes, format='audio/ogg')
+        st.write(audio)
 
