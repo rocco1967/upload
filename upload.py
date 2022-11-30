@@ -73,10 +73,10 @@ link = st.text_input('Insert YouTube ')
 file_name = 'trial_video.mp4' 
 
 rsp = urllib2.urlopen(link)
-with open(file_name,'wb') as bf:
-     bf.write(rsp.read())
-       
-     st.download_button('press',data=bf)    
+with open(file_name,'wb') as f:
+     a=f.write(rsp.read())
+     binary = b'a'
+     st.download_button('press',data=binary)    
     
 ##########################################################################
 import urllib.request #as urllib2
