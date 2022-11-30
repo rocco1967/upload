@@ -68,7 +68,7 @@ if selectbox =='photo':
 #st.video(a)
 from urllib import request
 URL = st.text_input('video')
-response = request.urlretrieve(url, "instagram.ico")
+response = request.urlretrieve(URL, "instagram.ico")
 ##########################################################################
 import urllib.request #as urllib2
 url = st.text_input("Enter the Youtube")
