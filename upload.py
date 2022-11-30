@@ -76,7 +76,7 @@ try:
     urllib.request.urlretrieve(url, name)
     st.write("Download completed..!!")
 except Exception as e:
-    sr.write(e)
+    st.write(e)
 ##################################################################################    
 youtube_streams=st.text_input('Insert YouTube Link')#
 var_regex = re.compile(r"^\$*\w+\W")
