@@ -75,7 +75,7 @@ rsp = urllib2.urlopen(link)
 with open(file_name,'wb') as f:
     f.write(rsp.read())
 ##########################################################################
-import urllib.request
+import urllib.request as urllib2
 url = st.text_input("Enter the Youtube")
 #name = st.text_input("Enter the name for the video")
 #name=name
