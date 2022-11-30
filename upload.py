@@ -75,8 +75,8 @@ try:
     st.write("Downloading starts...\n")
     urllib.request.urlretrieve(url)#, name)
     with open(file_name,'wb') as f:
-    f.write(rsp.read())
-       st.write("Download completed..!!")
+        f.write(rsp.read())
+        st.write("Download completed..!!")
 except Exception as e:
     st.write(e)
 ##################################################################################    
