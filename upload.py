@@ -64,9 +64,10 @@ if selectbox =='photo':
 #youtube_streams='https://www.youtube.com/watch?v=qod03PVTLqk'
 #fp = tempfile.TemporaryFile()
 a=st.text_input('Insert YouTube ')################################
-video_file = open('a', 'rb')
-video_bytes = a.read()
-st.video(a)
+video_file=a.download()
+video_file = open('video_file', 'rb')
+video_bytes = video_file.read()
+st.video(video_butes)
 youtube_streams=st.text_input('Insert YouTube Link')#
 var_regex = re.compile(r"^\$*\w+\W")
 if youtube_streams is not None:
