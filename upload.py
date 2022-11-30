@@ -69,6 +69,7 @@ var_regex = re.compile(r"^\$*\w+\W")
 if youtube_streams is not None:
     
     yt=YouTube(youtube_streams)#.streams.first()
+    st.write(yt.streams.filter(only_audio=True))
     try:
            
     #time.sleep(2)
