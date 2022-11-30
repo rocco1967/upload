@@ -70,6 +70,7 @@ if youtube_streams is not None:
     
     yt=YouTube(youtube_streams)#.streams.first()
     try:
+        audio=yt.streams.get_audio_only()
     except pytube.exceptions.RegexMatchError:
         st.write('Video is unavaiable,skipping.')
     else:    
