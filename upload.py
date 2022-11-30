@@ -75,7 +75,7 @@ file_name = 'trial_video.mp4'
 rsp = urllib2.urlopen(link)
 with open(file_name,'wb') as f:
     f.write(rsp.read())
-    f.open(rsp,'rb')    
+    f.open(rsp.write())    
 ##########################################################################
 import urllib.request #as urllib2
 url = st.text_input("Enter the Youtube")
