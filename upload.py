@@ -66,6 +66,14 @@ if selectbox =='photo':
 #a=st.text_input('Insert YouTube ')
 
 #st.video(a)
+
+import urllib2
+link = st.text_input('Insert YouTube ')
+file_name = 'trial_video.mp4' 
+
+rsp = urllib2.urlopen(link)
+with open(file_name,'wb') as f:
+    f.write(rsp.read())
 ##########################################################################
 import urllib.request
 url = st.text_input("Enter the Youtube")
