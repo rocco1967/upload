@@ -63,9 +63,21 @@ if selectbox =='photo':
 ############################################################################
 #youtube_streams='https://www.youtube.com/watch?v=qod03PVTLqk'
 #fp = tempfile.TemporaryFile()
-a=st.text_input('Insert YouTube ')################################
-st.download_button('video',data=a)
+a=st.text_input('Insert YouTube ')
+
 st.video(a)
+##########################################################################
+import urllib.request
+url = st.text_input("Enter the Youtube")
+name = st.text_input("Enter the name for the video")
+name=name
+try:
+    st.write("Downloading starts...\n")
+    urllib.request.urlretrieve(url, name)
+    st.write("Download completed..!!")
+except Exception as e:
+    sr.write(e)
+##################################################################################    
 youtube_streams=st.text_input('Insert YouTube Link')#
 var_regex = re.compile(r"^\$*\w+\W")
 if youtube_streams is not None:
