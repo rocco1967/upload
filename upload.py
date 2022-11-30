@@ -80,7 +80,7 @@ if youtube_streams is not None:
     except pytube.exceptions.VideoUnavailable:
         st.write('Video is unavaialable, skipping.') 
     else:    
-        audio=audio.download()
+        audio=audio.first().download()
     #audio=BytesIO(audio)
         audio_file=open(audio,'rb')
         audio_bytes = audio_file.read()
