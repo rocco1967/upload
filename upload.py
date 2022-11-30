@@ -75,7 +75,7 @@ file_name = 'trial_video.mp4'
 rsp = urllib2.urlopen(link)
 with open(file_name,'wb') as f:
      a=f.write(rsp.read())
-a=open(a,'rb')    
+a.read()   
 st.download_button('press',data=a)    
     
 ##########################################################################
