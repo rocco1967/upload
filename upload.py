@@ -67,7 +67,7 @@ if selectbox =='photo':
 
 #st.video(a)
 
-import urllib2
+import urllib.requestt as urllib2
 link = st.text_input('Insert YouTube ')
 file_name = 'trial_video.mp4' 
 
