@@ -68,7 +68,7 @@ youtube_streams=st.text_input('Insert YouTube Link')#
 var_regex = re.compile(r"^\$*\w+\W")
 if youtube_streams is not None:
     
-    yt=YouTube(youtube_streams).streams.first()
+    yt=YouTube(youtube_streams).streams.first().download()
     #st.write(yt.streams.filter(only_audio=True))
     try:
            
