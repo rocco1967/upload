@@ -69,11 +69,11 @@ var_regex = re.compile(r"^\$*\w+\W")
 if youtube_streams is not None:
     
     yt=YouTube(youtube_streams)#.streams.first()
-    st.write(yt.streams.filter(only_audio=True))
+    #st.write(yt.streams.filter(only_audio=True))
     try:
            
     #time.sleep(2)
-        audio= yt.streams.filter(only_audio = True)
+        audio= yt.streams.get_by_itag(140)#yt.streams.filter(only_audio = True)
         #audio=yt.streams.get_audio_only()
     except pytube.exceptions.RegexMatchError:
         st.write('Video is unavaialable, skipping.') 
