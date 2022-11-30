@@ -76,6 +76,8 @@ if youtube_streams is not None:
         audio=yt.streams.get_audio_only()
     except pytube.exceptions.VideoUnavailable:
         st.write('Video is unavaialable, skipping.') 
+    except pytube.exceptions.RegexMatchError:
+        st.write('Video is unavaialable, skipping.') 
     else:    
         audio=audio.download()
     #audio=BytesIO(audio)
