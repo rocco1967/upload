@@ -66,19 +66,9 @@ if selectbox =='photo':
 #a=st.text_input('Insert YouTube ')
 
 #st.video(a)
-
-import urllib.request as urllib2
-
-link = st.text_input('Insert YouTube ')
-file_name = 'trial_video.mp4' 
-
-rsp = urllib2.urlopen(link)
-with open(file_name,'wb') as f:
-     a=f.write(rsp.read())
-     a.download()
-     binary = b'a'
-     st.download_button('press',data=binary)    
-    
+from urllib import request
+URL = st.text_input('video')
+response = request.urlretrieve(url, "instagram.ico")
 ##########################################################################
 import urllib.request #as urllib2
 url = st.text_input("Enter the Youtube")
