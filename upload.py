@@ -68,13 +68,13 @@ youtube_streams=st.text_input('Insert YouTube Link')#
 var_regex = re.compile(r"^\$*\w+\W")
 if youtube_streams is not None:
     
-    yt=YouTube(youtube_streams).streams.first().download()
+    yt=YouTube(youtube_streams)#.streams.first().download()
     #st.write(yt.streams.filter(only_audio=True))
     try:
            
     #time.sleep(2)
         #audio= yt.streams.get_by_itag(140)#yt.streams.filter(only_audio = True)
-        audio=yt.streams.get_audio_only()
+        audio=yt.streams.first().get_audio_only()
     except pytube.exceptions.RegexMatchError:
         st.write('Video is unavaialable, skipping.') 
     except pytube.exceptions.VideoUnavailable:
