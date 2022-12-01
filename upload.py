@@ -62,7 +62,9 @@ if selectbox =='photo':
 #st.image(uploaded_filcached_image=fil.getvalue()
 
 from PyPDF2 import PdfReader   #######     PDF
+mport base64
+import tempfile
+import streamlit as st
+from pdf2image import convert_from_path
+from pathlib import Path
 
-uploaded_file = st.file_uploader("Choose a file_PDF",type='pdf')
-if uploaded_file is not None:
-    df = extract_data(uploaded_file)
