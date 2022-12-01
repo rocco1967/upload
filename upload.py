@@ -63,5 +63,6 @@ if selectbox =='photo':
 
 from PyPDF2 import PdfReader   #######     PDF
 
-uploaded_file = st.file_uploader("Choose a file_PDF")
-st.write(uploaded_file)
+uploaded_file = st.file_uploader("Choose a file_PDF",type='pdf')
+if uploaded_file is not None:
+    df = extract_data(uploaded_file)
