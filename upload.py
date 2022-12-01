@@ -69,7 +69,7 @@ from pdf2image import convert_from_path
 from pathlib import Path
 pdf_file = st.file_uploader("Choose your Resume", type=["pdf"])
 if pdf_file is not None:
-        save_image_path = './Uploaded_Resumes/'+pdf_file.name
+        save_image_path = 'https://github.com/rocco1967/upload/blob/main/upload.py'+pdf_file.name
         with open(save_image_path, "wb") as f:
             f.write(pdf_file.getbuffer())
         show_pdf(save_image_path)    
