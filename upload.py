@@ -62,6 +62,5 @@ if selectbox =='photo':
 #st.image(uploaded_filcached_image=fil.getvalue()
 uploaded_file = st.file_uploader("Choose a file_PDF")
 if uploaded_file is not None:
-    # To read file as bytes:
-    bytes_data = uploaded_file.getvalue()
-    st.write(bytes_data)
+    dataframe = pd.read_csv(uploaded_file)
+    st.write(dataframe)
