@@ -60,4 +60,4 @@ if selectbox =='photo':
     else:
         st.write('make your choice')
 #st.image(uploaded_filcached_image=fil.getvalue()
-st.download_button('download_PDF')
+st.file_uploader('download_PDF')
