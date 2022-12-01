@@ -64,4 +64,4 @@ if selectbox =='photo':
 from PyPDF2 import PdfReader   #######     PDF
 
 uploaded_file = st.file_uploader("Choose a file_PDF")
-sr.write(uploaded_file)
+st.write(uploaded_file)
