@@ -60,4 +60,8 @@ if selectbox =='photo':
     else:
         st.write('make your choice')
 #st.image(uploaded_filcached_image=fil.getvalue()
-st.file_uploader('download_PDF')
+uploaded_file = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+    # To read file as bytes:
+    bytes_data = uploaded_file.getvalue()
+    st.write(bytes_data)
