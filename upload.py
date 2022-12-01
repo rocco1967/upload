@@ -67,9 +67,30 @@ import tempfile
 import streamlit as st
 from pdf2image import convert_from_path
 from pathlib import Path
-pdf_file = st.file_uploader("Choose your Resume", type=["pdf"])
-if pdf_file is not None:
-        save_image_path = 'https://github.com/rocco1967/upload'
-        with open(save_image_path, "wb") as f:
-            f.write(pdf_file.getbuffer())
-        show_pdf(save_image_path)    
+import glob, os, sys; sys.path.append('../src')
+#import helper
+import preprocessing as pre
+import cleaning as clean
+
+#import basics
+import numpy as np
+import streamlit as st
+
+def app():
+
+    with st.container():
+
+        file = st.file_uploader('Upload PDF File', type=['pdf', 'docx', 'txt'])
+
+        if file is not None:
+            st.write("Filename: ", file.name)
+
+            # load document
+            docs = pre.load_document(file)
+
+            # preprocess document
+            docs_processed, df, all_text, par_list = clean.preprocessing(docs)
+            
+            # print document:
+            for i in par_list:
+               st.write(i)
