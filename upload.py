@@ -4,7 +4,7 @@ Created on Thu Nov 24 10:38:04 2022
 
 @author: 39333
 """
-import pdfminer
+
 import streamlit as st
 import time
 from io import StringIO,BytesIO
@@ -61,9 +61,10 @@ if selectbox =='photo':
         st.write('make your choice')
 #st.image(uploaded_filcached_image=fil.getvalue()
 
-from pdfminer.high_level import extract_pages
+from PyPDF2 import PdfReader   #######     PDF
+
 uploaded_file = st.file_uploader("Choose a file_PDF")
-if uploaded_file is not None:
-    for page_layout in extract_pages(uploaded_file):
-        for element in page_layout:
-            st.write(element)
+reader = PdfReader(uploaded_file)
+page = reader.pages[0]
+st.write(page.extract_text())
+
