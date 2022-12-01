@@ -61,7 +61,7 @@ if selectbox =='photo':
         st.write('make your choice')
 #st.image(uploaded_filcached_image=fil.getvalue()
 ###############################################################################################################################
-rom PyPDF2 import PdfReader   #######     PDF
+from PyPDF2 import PdfReader   #######     PDF
 import base64
 import tempfile
 import streamlit as st
