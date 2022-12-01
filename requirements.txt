@@ -6,3 +6,4 @@ requests
 matplotlib
 pytube
 regex
+pdfminer
