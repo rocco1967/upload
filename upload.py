@@ -60,6 +60,8 @@ if selectbox =='photo':
     else:
         st.write('make your choice')
 #st.image(uploaded_filcached_image=fil.getvalue()
+
+from pdfminer.high_level import extract_pages
 uploaded_file = st.file_uploader("Choose a file_PDF")
 if uploaded_file is not None:
     for page_layout in extract_pages(uploaded_file):
