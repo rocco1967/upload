@@ -60,48 +60,4 @@ if selectbox =='photo':
     else:
         st.write('make your choice')
 #st.image(uploaded_filcached_image=fil.getvalue()
-############################################################################
-#youtube_streams='https://www.youtube.com/watch?v=qod03PVTLqk'
-#fp = tempfile.TemporaryFile()
-#a=st.text_input('Insert YouTube ')
-
-#st.video(a)
-from urllib import request
-URL = st.text_input('video')
-response = request.urlretrieve(URL, "instagram.ico")
-##########################################################################
-import urllib.request #as urllib2
-url = st.text_input("Enter the Youtube")
-#name = st.text_input("Enter the name for the video")
-#name=name
-try:
-    st.write("Downloading starts...\n")
-    urllib.request.urlretrieve(url) 
-    st.write("Download completed..!!")
-except Exception as e:
-    st.write(e)
-##################################################################################    
-youtube_streams=st.text_input('Insert YouTube Link')#
-var_regex = re.compile(r"^\$*\w+\W")
-if youtube_streams is not None:
-    
-    yt=YouTube(youtube_streams)#.streams.first().download()
-    #st.write(yt.streams.filter(only_audio=True))
-    try:
-           
-    #time.sleep(2)
-        #audio= yt.streams.get_by_itag(140)#yt.streams.filter(only_audio = True)
-        audio=yt.streams.get_audio_only()
-    except pytube.exceptions.RegexMatchError:
-        st.write('Video is unavaialable, skipping.') 
-    except pytube.exceptions.VideoUnavailable:
-        st.write('Video is unavaialable, skipping.') 
-    else:    
-        audio=audio.download()
-    #audio=BytesIO(audio)
-        audio_file=open(audio,'rb')
-        audio_bytes = audio_file.read()
-        st.download_button('download_file',data=audio_bytes)
-        st.audio(audio_bytes, format='audio/ogg')
-        st.write(audio)
 
