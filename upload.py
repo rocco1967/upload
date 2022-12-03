@@ -76,7 +76,7 @@ youtube_stream = st.text_input('inserisci_link')#'https://www.youtube.com/watch?
 yt=YouTube(youtube_stream)
 audio = yt.streams.get_audio_only()
 a=audio.download()
-with open("a", "rb") as file:
+with open(a, "rb") as file:
     btn = st.download_button(
             label="Download image",
             data=file,
