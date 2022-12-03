@@ -132,7 +132,7 @@ def refine_format(fmt_type: str='audio') -> (str, bool):
     return fmt, progressive
 
 
-st.set_page_config(page_title=" Youtube downloader", layout="wide")
+#st.set_page_config(page_title=" Youtube downloader", layout="wide")
 
 # ====== SIDEBAR ======
 with st.sidebar:
