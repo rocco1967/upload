@@ -75,4 +75,4 @@ import re
 youtube_stream = st.text_input('inserisci_link')#'https://www.youtube.com/watch?v=DtVBCG6ThDk'
 yt=YouTube(youtube_stream)
 audio = yt.streams.get_audio_only()
-audio.download(https://github.com/rocco1967/upload)
+audio.download('https://github.com/rocco1967/upload')
