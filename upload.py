@@ -139,7 +139,7 @@ with st.sidebar:
 
     st.title("Youtube download app")
 
-    url = st.text_input("Insert your link here", key="url")
+    url = (st.text_input("Insert your link here", key="url"),headers={'User-Agent': 'Mozilla/5.0'})
 
     fmt_type = st.selectbox("Choose format:", ['video (only)', 'audio (only)', 'video + audio'], key='fmt')
 
