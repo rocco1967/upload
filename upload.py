@@ -72,7 +72,7 @@ if selectbox =='photo':
 import streamlit as st
 import requests
 from pytube import YouTube, StreamQuery
-
+from urllib.request import Request, urlopen
 import base64
 import os
 
@@ -139,7 +139,7 @@ with st.sidebar:
 
     st.title("Youtube download app")
 
-    url = (st.text_input("Insert your link here", key="url"),headers={'User-Agent': 'Mozilla/5.0'})
+    url = st.text_input("Insert your link here", key="url")#,headers={'User-Agent': 'Mozilla/5.0'})
 
     fmt_type = st.selectbox("Choose format:", ['video (only)', 'audio (only)', 'video + audio'], key='fmt')
 
