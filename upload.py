@@ -19,7 +19,7 @@ import re
 import yaml
 var_regex = re.compile(r"^\$*\w+\W")
 ##################################################################
-with open('../config.yaml','r') as file:
+with open('../config.yml','r') as file:
     config = yaml.load(file, Loader=SafeLoader)
 authenticator = Authenticate(
     config['credentials'],
