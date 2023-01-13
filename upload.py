@@ -68,5 +68,5 @@ if selectbox =='photo':
 ###############################################################################################################################
 #youtube_stream = st.text_input('link_video_youtube':)
 #st.video(st.text_input('link_video_youtube:',))    
-video ='https://www.youtube.com/watch?v=b7o3F-MVE-Y'
-yt=YouTube('https://www.youtube.com/watch?v=b7o3F-MVE-Y')
+video =st.text_area('video link')
+yt=YouTube()
