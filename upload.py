@@ -29,10 +29,10 @@ authenticator = stauth.Authenticate(
     config['cookie']['expiry_days'],
     config['preauthorized']
 )
-GF, authentication_status, username = authenticator.login('Login', 'main')
+name, authentication_status, username = authenticator.login('Login', 'main')
 if authentication_status:
     authenticator.logout('Logout', 'main')
-    st.write(f'Welcome *{GF}*')
+    st.write(f'Welcome *{name}*')
     st.title('Some content')
 elif authentication_status == False:
     st.error('Username/password is incorrect')
