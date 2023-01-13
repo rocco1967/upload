@@ -17,6 +17,7 @@ import regex
 import tempfile
 import re
 import yaml
+from yaml import SafeLoader
 var_regex = re.compile(r"^\$*\w+\W")
 ##################################################################
 with open('config.yml','r') as file:
