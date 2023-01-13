@@ -8,5 +8,5 @@ pytube
 regex
 PyPDF2
 pdf2image
-
+streamlit-authenticator
 
