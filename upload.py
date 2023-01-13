@@ -22,7 +22,7 @@ var_regex = re.compile(r"^\$*\w+\W")
 ##################################################################
 with open('config.yml','r') as file:
     config = yaml.load(file, Loader=SafeLoader)
-authenticator = Authenticate(
+authenticator = stauth.Authenticate(
     config['credentials'],
     config['cookie']['name'],
     config['cookie']['key'],
