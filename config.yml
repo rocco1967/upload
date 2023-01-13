@@ -1,0 +1,14 @@
+credentials:
+  usernames:
+    GF:
+      email: gianfranco.fa@gmail.com
+      name: GF
+      password: '666666' # To be replaced with hashed password
+    
+cookie:
+  expiry_days: 30
+  key: random_signature_key
+  name: random_cookie_name
+preauthorized:
+  emails:
+  - gianfranco.fa@gmail.com
