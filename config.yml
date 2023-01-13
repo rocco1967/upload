@@ -3,7 +3,7 @@ credentials:
     GF:
       email: gianfranco.fa@gmail.com
       name: GF
-      password: '666666' # To be replaced with hashed password
+      password: 666666 # To be replaced with hashed password
     
 cookie:
   expiry_days: 30
