@@ -20,24 +20,6 @@ import yaml
 from yaml import SafeLoader
 var_regex = re.compile(r"^\$*\w+\W")
 ##################################################################
-with open('config.yml','r') as file:
-    config = yaml.load(file, Loader=SafeLoader)
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
-)
-name, authentication, username = authenticator.login('Login', 'main')
-if authentication:
-    authenticator.logout('Logout', 'main')
-    st.write(f'Welcome *{name}*')
-    st.title('Some content')
-elif authentication == False:
-    st.error('Username/password is incorrect')
-elif authentication == None:
-    st.warning('Please enter your username and password')
 
 ###################################################################
 #st.write(pytube.__version__)
