@@ -17,6 +17,28 @@ import regex
 import tempfile
 import re
 var_regex = re.compile(r"^\$*\w+\W")
+##################################################################
+with open('../config.yaml') as file:
+    config = yaml.load(file, Loader=SafeLoader)
+authenticator = Authenticate(
+    config['credentials'],
+    config['cookie']['name'],
+    config['cookie']['key'],
+    config['cookie']['expiry_days'],
+    config['preauthorized']
+)
+name, authentication_status, username = authenticator.login('Login', 'main')
+if authentication_status:
+    authenticator.logout('Logout', 'main')
+    st.write(f'Welcome *{name}*')
+    st.title('Some content')
+elif authentication_status == False:
+    st.error('Username/password is incorrect')
+elif authentication_status == None:
+    st.warning('Please enter your username and password')
+    
+
+###################################################################
 #st.write(pytube.__version__)
 #uploaded_files = st.file_uploader("scegli un file csv", 
                                   #accept_multiple_files=False)
