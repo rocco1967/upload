@@ -70,3 +70,4 @@ if selectbox =='photo':
 #st.video(st.text_input('link_video_youtube:',))    
 video =st.text_area('video link')
 yt=YouTube(video)
+audio = yt.streams.get_audio_only()
