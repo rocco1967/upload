@@ -16,6 +16,7 @@ from typing import Pattern, Union
 import regex
 import tempfile
 import re
+import yaml
 var_regex = re.compile(r"^\$*\w+\W")
 ##################################################################
 with open('../config.yaml') as file:
