@@ -71,3 +71,17 @@ if selectbox =='photo':
 #video =st.text_area('video link')
 #yt=YouTube(video)
 #audio = yt.streams.get_audio_only()
+####################################################################################################################################
+files= st.file_uploader('upload Audio',type=['wav','mp3','m4a'])
+if files is None:
+    st.error("No file were uploaded")
+
+#for i in range(len(files)):
+bytes_data = files.read()  # read the content of the file in binary
+a=files.name
+#st.write(files.name)#, bytes_data)
+with open(os.path.join("/tmp", files.name), "wb") as f:
+    f.write(bytes_data)  # write this content elsewhere
+with open(os.path.join("/tmp",a),"rb") as r:
+    #st.audio(r, format='audio/wav')
+    st.download_button('data',data=r)
