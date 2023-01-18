@@ -19,6 +19,7 @@ import re
 import yaml
 from yaml import SafeLoader
 var_regex = re.compile(r"^\$*\w+\W")
+import os
 ##################################################################
 
 ###################################################################
