@@ -85,4 +85,4 @@ with open(os.path.join("/tmp", files.name), "wb") as f:
     f.write(bytes_data)  # write this content elsewhere
 with open(os.path.join("/tmp",a),"rb") as r:
     #st.audio(r, format='audio/wav')
-    st.download_button('DOWNLOAD MUSIC_FILE',data=r+str(a))
+    st.download_button('DOWNLOAD MUSIC_FILE',data=r)
