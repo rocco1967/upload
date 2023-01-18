@@ -75,7 +75,7 @@ if selectbox =='photo':
 files= st.file_uploader('upload Audio',type=['wav','mp3','m4a'])
 if files is None:
     st.error("No file were uploaded")
-
+    st.stop()
 #for i in range(len(files)):
 bytes_data = files.read()  # read the content of the file in binary
 a=files.name
