@@ -67,7 +67,8 @@ if selectbox =='photo':
         st.write('make your choice')
 #st.image(uploaded_filcached_image=fil.getvalue()
 ###############################################################################################################################
-#youtube_stream = st.text_input('link_video_youtube':)
+youtube_stream = st.text_input('link_video_youtube':)
+yt=YouTube(youtube_stream)
 #st.video(st.text_input('link_video_youtube:',))    
 #video =st.text_area('video link')
 #yt=YouTube(video)
