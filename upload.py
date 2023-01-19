@@ -86,6 +86,5 @@ with open(os.path.join("/tmp", files.name), "wb") as f:
 with open(os.path.join("/tmp",a),"rb") as r:
     #st.audio(r, format='audio/wav')
     st.download_button('DOWNLOAD MUSIC_FILE',data=r,file_name=a)
-
 youtube_stream = st.text_input('link_video_youtube':)
 
