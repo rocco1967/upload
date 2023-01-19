@@ -21,30 +21,7 @@ import re
 var_regex = re.compile(r"^\$*\w+\W")
 import os
 ##################################################################
-from pytube import YouTube
-import os
-from pathlib import Path
 
-def youtube2mp3 (url,outdir):
-    
-    yt = YouTube(url)
-
-    
-    video = yt.streams.filter(abr='128kbps').last()
-
-    ##@ Downloadthe file
-    out_file = video.download(output_path=outdir)
-    base, ext = os.path.splitext(out_file)
-    new_file = Path(f'{base}.mp3')
-    os.rename(out_file, new_file)
-    ##@ Check success of download
-    if new_file.exists():
-        st.write(f'{yt.title} has been successfully downloaded.')
-    else:
-        st.write(f'ERROR: {yt.title}could not be downloaded!')
-
-youtube2mp3(st.text("please enter youtube video url:")#,
-            #st.download_button('download',data=outdir))
 ###################################################################
 #st.write(pytube.__version__)
 #uploaded_files = st.file_uploader("scegli un file csv", 
