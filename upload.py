@@ -73,7 +73,7 @@ if selectbox =='photo':
 #yt=YouTube(video)
 #audio = yt.streams.get_audio_only()
 ####################################################################################################################################
-files= st.file_uploader('upload Audio',type=['wav','mp3','m4a'])
+files= st.file_uploader('upload Audio File',type=['wav','mp3','m4a'])
 if files is None:
     st.error("No file were uploaded")
     st.stop()
@@ -95,4 +95,4 @@ from pathlib import Path
 
 #a=st.file_uploader("please enter youtube video url:")
 #,st.download_button('download music'))
-files= st.file_uploader('upload Audio',type=['wav','mp3','m4a'])
+
