@@ -70,7 +70,7 @@ if selectbox =='photo':
 import requests
 URL = st.text_input('url video')
 video_file = requests.get(URL)
-
+st.write(video_file)
 ####################################################################################################################################
 
 
