@@ -67,13 +67,7 @@ if selectbox =='photo':
         st.write('make your choice')
 #st.image(uploaded_filcached_image=fil.getvalue()
 ###############################################################################################################################
-import requests
-import urllib.request
-URL = st.text_input('url video')
-#st.write(URL)
-video_file = urllib.request.urlopen(URL)
-a=video_file.read()
-st.video('a')
+
 ####################################################################################################################################
 
 
