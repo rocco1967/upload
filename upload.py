@@ -71,7 +71,7 @@ import requests
 URL = st.text_input('url video')
 st.write(URL)
 video_file = requests.get(URL)
-#st.write(video_file)
+video_file.read()
 ####################################################################################################################################
 
 
