@@ -73,6 +73,9 @@ if selectbox =='photo':
 #yt=YouTube(video)
 #audio = yt.streams.get_audio_only()
 ####################################################################################################################################
+
+
+######################################################################################################################################
 files= st.file_uploader('upload Audio File',type=['wav','mp3','m4a'])
 if files is None:
     st.error("No file were uploaded")
@@ -87,4 +90,3 @@ with open(os.path.join("/tmp",a),"rb") as r:
     #st.audio(r, format='audio/wav')
     st.download_button('DOWNLOAD MUSIC_FILE',data=r,file_name=a)
 
-you_stream=st.file_uploader('upload Audio File',type=['wav','mp3','m4a'])
