@@ -86,3 +86,27 @@ with open(os.path.join("/tmp", files.name), "wb") as f:
 with open(os.path.join("/tmp",a),"rb") as r:
     #st.audio(r, format='audio/wav')
     st.download_button('DOWNLOAD MUSIC_FILE',data=r,file_name=a)
+#######################################################################################################################################
+from pytube import YouTube
+import os
+from pathlib import Path
+
+def youtube2mp3 (url,outdir):
+    
+    yt = YouTube(url)
+
+    
+    video = yt.streams.filter(abr='128kbps').last()
+
+    ##@ Downloadthe file
+    out_file = video.download(output_path=outdir)
+    base, ext = os.path.splitext(out_file)
+    new_file = Path(f'{base}.mp3')
+    os.rename(out_file, new_file)
+    ##@ Check success of download
+    if new_file.exists():
+        st.write(f'{yt.title} has been successfully downloaded.')
+    else:
+        st.write(f'ERROR: {yt.title}could not be downloaded!')
+
+youtube2mp3(st.file_uploader("please enter youtube video url:"),st.download_button('download music'))
