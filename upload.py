@@ -93,6 +93,6 @@ from pathlib import Path
 
 
 
-a=st.file_uploader("please enter youtube video url:")
+#a=st.file_uploader("please enter youtube video url:")
 #,st.download_button('download music'))
-
+files= st.file_uploader('upload Audio',type=['wav','mp3','m4a'])
