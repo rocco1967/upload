@@ -71,7 +71,7 @@ import requests
 import urllib.request
 URL = st.text_input('url video')
 #st.write(URL)
-video_file = urllib.request.urlopen(r'URL')
+video_file = urllib.request.urlopen(URL)
 video_file.read()
 ####################################################################################################################################
 
