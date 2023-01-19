@@ -4,7 +4,7 @@ Created on Thu Nov 24 10:38:04 2022
 
 @author: 39333
 """
-import streamlit_authenticator as stauth
+#import streamlit_authenticator as stauth
 import streamlit as st
 import time
 from io import StringIO,BytesIO
@@ -16,8 +16,8 @@ from typing import Pattern, Union
 import regex
 import tempfile
 import re
-import yaml
-from yaml import SafeLoader
+#import yaml
+#from yaml import SafeLoader
 var_regex = re.compile(r"^\$*\w+\W")
 import os
 ##################################################################
